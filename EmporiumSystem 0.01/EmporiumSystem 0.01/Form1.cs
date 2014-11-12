@@ -21,5 +21,10 @@ namespace EmporiumSystem_0._01
         {
 
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
