@@ -13,6 +13,7 @@ using MetroFramework;
 using Transitions;
 
 
+
 namespace EmporiumSystem_0._01
 {
     public partial class Form1 : MetroForm
