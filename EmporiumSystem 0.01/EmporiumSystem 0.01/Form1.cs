@@ -24,10 +24,10 @@ namespace EmporiumSystem_0._01
         }
 
         private void Form1_Load(object sender, EventArgs e)
-       {
-        //    Transition t1 = new Transition(new TransitionType_Linear(1000));
-        //    t1.add(pictureBox1, "Top", 80);
-        //    Transition.runChain(t1);
+        {       
+            Transition t1 = new Transition(new TransitionType_Linear(1000));
+            t1.add(pictureBox1, "Top", 80);
+            Transition.runChain(t1);
 
             metroToolTip1.SetToolTip(metroTextBox1, "Digite seu nome de usuário");             
         }
