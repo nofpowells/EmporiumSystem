@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Transitions">
       <HintPath>C:\Users\NofPowells\Desktop\Transitions.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +101,9 @@
       <Project>{788c6086-65d4-4a14-a985-ea83ccb54191}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
