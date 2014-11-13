@@ -54,7 +54,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="Transitions">
       <HintPath>C:\Users\NofPowells\Desktop\Transitions.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -103,7 +102,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <Content Include="Transitions.dll" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Transitions.dll" />
