@@ -1,6 +1,6 @@
 ﻿namespace EmporiumSystem_0._01
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -145,6 +145,7 @@
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Emporium System";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
