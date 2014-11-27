@@ -42,26 +42,19 @@ namespace EmporiumSystem_0._01
             this.Show();
 
          
-        }  
+        }      
 
-      
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            MetroUI.Style.DarkStyle = !(MetroUI.Style.DarkStyle);
+        }
+
         private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
             var rectangle = e.CellBounds;
             rectangle.Inflate(-1, -1);
             ControlPaint.DrawBorder3D(e.Graphics, rectangle, Border3DStyle.Flat);
             ControlPaint.DrawBorder(e.Graphics, rectangle, Color.Orange, ButtonBorderStyle.Solid);
-        }
-
-        private void metroButton1_Click_1(object sender, EventArgs e)
-        {
-            MetroUI.Style.DarkStyle = !(MetroUI.Style.DarkStyle);
-        }
-
-        private void ribbonButtonPDV_Click(object sender, EventArgs e)
-        {
-            Caixa CX = new Caixa();
-            CX.ShowDialog();
         } 
     
     }

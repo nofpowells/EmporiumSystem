@@ -26,7 +26,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,7 +36,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +45,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -62,9 +59,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.Ribbon35">
-      <HintPath>..\..\..\Frameworks\Binaries\System.Windows.Forms.Ribbon35.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,12 +72,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caixa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Caixa.Designer.cs">
-      <DependentUpon>Caixa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +96,6 @@
     <Compile Include="metro\MetroUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Caixa.resx">
-      <DependentUpon>Caixa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +131,12 @@
     <None Include="Resources\logo-the-emporium1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{788c6086-65d4-4a14-a985-ea83ccb54191}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\case.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -173,51 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_file.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Modelos\Modelos.csproj">
-      <Project>{788c6086-65d4-4a14-a985-ea83ccb54191}</Project>
-      <Name>Modelos</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\custom-reports.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Chart.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\build_blocked-128.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cart.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dollar.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cash-register.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\inventory-maintenance.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\product.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Package-Add.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\item-configuration.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\User-Female.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\User-Male.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Man_Red.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
