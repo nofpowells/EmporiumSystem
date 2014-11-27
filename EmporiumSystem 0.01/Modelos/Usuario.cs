@@ -33,13 +33,17 @@ namespace Modelos
             this.senha = senha;
         }
 
-        public bool VerificarLogin(string nome, string senha)
+        public int VerificarLogin(string nome, string senha)
         {
             if (nome == "admin" && senha == "admin")
             {
-                return true;
+                return 1;
             }
-            return false;
+            else if (nome == "user" && senha == "user")
+            {
+                return 2;
+            }
+            return 0;
         }
     }
 }

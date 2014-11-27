@@ -44,9 +44,15 @@ namespace EmporiumSystem_0._01
         {
             Usuario novoUsuario = new Usuario();
 
-            if(novoUsuario.VerificarLogin(txtBoxUsuario.Text, txtBoxSenha.Text))
+            if(novoUsuario.VerificarLogin(txtBoxUsuario.Text, txtBoxSenha.Text) == 1)
             {
                 this.Hide();
+            }
+            else if (novoUsuario.VerificarLogin(txtBoxUsuario.Text, txtBoxSenha.Text) == 2)
+            {
+                this.Hide();
+                Caixa CX = new Caixa();
+                CX.ShowDialog();
             }
             else if (txtBoxUsuario.Text == "" && txtBoxSenha.Text == "")
                 MetroMessageBox.Show(this, "Informe o campo Usuário e Senha", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
