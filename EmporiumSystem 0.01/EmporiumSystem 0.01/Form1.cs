@@ -30,9 +30,7 @@ namespace EmporiumSystem_0._01
             Transition t1 = new Transition(new TransitionType_Linear(1000));
             t1.add(pictureBox1, "Top", 80);
             Transition.runChain(t1);
-            voltando 
-
-            metroToolTip1.SetToolTip(txtBoxUsuario, "Digite seu nome de usuário");             
+       
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
