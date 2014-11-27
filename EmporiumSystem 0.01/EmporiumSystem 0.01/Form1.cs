@@ -11,41 +11,57 @@ using MetroFramework.Fonts;
 using MetroFramework.Forms;
 using MetroFramework;
 using Transitions;
+using Modelos;
 
 
 
 namespace EmporiumSystem_0._01
 {
-    public partial class Form1 : MetroForm
+    public partial class FormLogin : MetroForm
     {
-        public Form1()
+        
+        public FormLogin()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {       
+       {
             Transition t1 = new Transition(new TransitionType_Linear(1000));
             t1.add(pictureBox1, "Top", 80);
             Transition.runChain(t1);
             voltando 
 
-            metroToolTip1.SetToolTip(metroTextBox1, "Digite seu nome de usuário");             
+            metroToolTip1.SetToolTip(txtBoxUsuario, "Digite seu nome de usuário");             
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void btnLogar_Click(object sender, EventArgs e)
         {
-            if (metroTextBox1.Text == "" && metroTextBox2.Text == "")
+            Usuario novoUsuario = new Usuario();
+
+            if(novoUsuario.VerificarLogin(txtBoxUsuario.Text, txtBoxSenha.Text) == 1)
+            {
+                this.Hide();
+            }
+            else if (novoUsuario.VerificarLogin(txtBoxUsuario.Text, txtBoxSenha.Text) == 2)
+            {
+                this.Hide();
+                Caixa CX = new Caixa();
+                CX.ShowDialog();
+            }
+            else if (txtBoxUsuario.Text == "" && txtBoxSenha.Text == "")
                 MetroMessageBox.Show(this, "Informe o campo Usuário e Senha", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if (metroTextBox1.Text == "")
+            else if (txtBoxUsuario.Text == "")
                 MetroMessageBox.Show(this, "Informe o campo Usuário", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if (metroTextBox2.Text == "")
+            else if (txtBoxSenha.Text == "")
                 MetroMessageBox.Show(this, "Informe o campo Senha", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MetroMessageBox.Show(this, "Usuário ou Senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

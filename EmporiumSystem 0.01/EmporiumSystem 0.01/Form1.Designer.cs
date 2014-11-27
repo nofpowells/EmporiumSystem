@@ -1,6 +1,6 @@
 ﻿namespace EmporiumSystem_0._01
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
+            this.btnCancelar = new MetroFramework.Controls.MetroButton();
+            this.btnLogar = new MetroFramework.Controls.MetroButton();
+            this.txtBoxUsuario = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxSenha = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btnCancelar
             // 
-            this.metroButton1.Location = new System.Drawing.Point(288, 152);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(108, 27);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Cancelar";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(288, 152);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(108, 27);
+            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // metroButton2
+            // btnLogar
             // 
-            this.metroButton2.Location = new System.Drawing.Point(407, 152);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(108, 27);
-            this.metroButton2.TabIndex = 1;
-            this.metroButton2.Text = "Logar";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.btnLogar.Location = new System.Drawing.Point(407, 152);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(108, 27);
+            this.btnLogar.TabIndex = 1;
+            this.btnLogar.Text = "Logar";
+            this.btnLogar.UseSelectable = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
-            // metroTextBox1
+            // txtBoxUsuario
             // 
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(379, 59);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(136, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.UseSelectable = true;
+            this.txtBoxUsuario.Lines = new string[0];
+            this.txtBoxUsuario.Location = new System.Drawing.Point(379, 59);
+            this.txtBoxUsuario.MaxLength = 32767;
+            this.txtBoxUsuario.Name = "txtBoxUsuario";
+            this.txtBoxUsuario.PasswordChar = '\0';
+            this.txtBoxUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxUsuario.SelectedText = "";
+            this.txtBoxUsuario.Size = new System.Drawing.Size(136, 23);
+            this.txtBoxUsuario.TabIndex = 3;
+            this.txtBoxUsuario.UseSelectable = true;
             // 
-            // metroTextBox2
+            // txtBoxSenha
             // 
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(379, 104);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.Size = new System.Drawing.Size(136, 23);
-            this.metroTextBox2.TabIndex = 4;
-            this.metroTextBox2.UseSelectable = true;
+            this.txtBoxSenha.Lines = new string[0];
+            this.txtBoxSenha.Location = new System.Drawing.Point(379, 104);
+            this.txtBoxSenha.MaxLength = 32767;
+            this.txtBoxSenha.Name = "txtBoxSenha";
+            this.txtBoxSenha.PasswordChar = '\0';
+            this.txtBoxSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxSenha.SelectedText = "";
+            this.txtBoxSenha.Size = new System.Drawing.Size(136, 23);
+            this.txtBoxSenha.TabIndex = 4;
+            this.txtBoxSenha.UseSelectable = true;
             // 
             // metroLabel1
             // 
@@ -103,6 +105,12 @@
             this.metroLabel2.TabIndex = 6;
             this.metroLabel2.Text = "Senha";
             // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
@@ -114,32 +122,30 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // metroToolTip1
+            // FormLogin
             // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroToolTip1.StyleManager = null;
-            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // Form1
-            // 
+            this.AcceptButton = this.btnLogar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackLocation = MetroFramework.Forms.BackLocation.BottomLeft;
+            this.BackMaxSize = 500;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(541, 293);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtBoxSenha);
+            this.Controls.Add(this.txtBoxUsuario);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormLogin";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Red;
-            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Text = "Emporium System";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -149,10 +155,10 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroButton btnCancelar;
+        private MetroFramework.Controls.MetroButton btnLogar;
+        private MetroFramework.Controls.MetroTextBox txtBoxUsuario;
+        private MetroFramework.Controls.MetroTextBox txtBoxSenha;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.PictureBox pictureBox1;
